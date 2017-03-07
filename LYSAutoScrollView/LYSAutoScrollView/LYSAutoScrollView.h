@@ -24,6 +24,8 @@ typedef void(^TapBlock)(NSDictionary * item);
 
 -(void)updateItem:(NSDictionary*)item itemView:(UIView*)itemView;
 
+-(void)setItemViewStyle:(UIView*)itemView;
+
 @end
 
 @interface LYSAutoScrollView : UIView

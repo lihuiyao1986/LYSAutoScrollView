@@ -8,9 +8,11 @@
 
 #import "DetailViewController.h"
 #import "LYSAutoScrollView.h"
+#import "LYSNoticeView.h"
 
 @interface DetailViewController ()<LYSAutoScrollViewDelegate>
 @property(nonatomic,strong)LYSAutoScrollView *listView;
+@property(nonatomic,strong)LYSNoticeView *noticeView;
 @end
 
 @implementation DetailViewController
@@ -36,6 +38,13 @@
     return _listView;
 }
 
+-(LYSNoticeView*)noticeView{
+    if (!_noticeView) {
+        _noticeView = [[LYSNoticeView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.listView.frame) + 20, self.view.frame.size.width, 40)];
+    }
+    return _noticeView;
+}
+
 -(void)updateItem:(NSDictionary *)item itemView:(UIView *)itemView{
     UILabel * lb = (UILabel*)itemView;
     lb.text = @"";
@@ -48,7 +57,7 @@
         self.detailDescriptionLabel.text = [self.detailItem description];
     }
     NSMutableArray *items = [NSMutableArray array];
-    [items addObject:@{@"title":@"李焱生"}];
+    [items addObject:@{@"title":@"李焱李焱生李焱生李焱生李焱生李焱生李焱生李焱生李焱生李焱生生"}];
     [items addObject:@{@"title":@"liyansheng"}];
     [items addObject:@{@"title":@"李辉耀1"}];
     [items addObject:@{@"title":@"李辉耀2"}];
@@ -64,11 +73,12 @@
     [self.view addSubview:self.listView];
     [self.listView start];
     
-//    __weak typeof (self) WeakSelf = self;
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [WeakSelf.listView addItem:@{@"title":@"李辉耀"}];
-//        [WeakSelf.listView addItem:@{@"title":@"谭小霞"}];
-//    });
+
+    [self.view addSubview:self.noticeView];
+    self.noticeView.imageUrl = @"notice_icon_1";
+    self.noticeView.scrollDirection = BottomToTop;
+    self.noticeView.items = items;
+    [self.noticeView start];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{

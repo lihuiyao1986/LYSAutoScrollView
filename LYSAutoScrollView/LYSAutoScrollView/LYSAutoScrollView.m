@@ -97,10 +97,10 @@
                     containerFrame.origin.x = 0;
                     break;
                 case TopToBottom:
-                    containerFrame.origin.y = -2 * MyWeakSelf.frame.size.height;
+                    containerFrame.origin.y = -MyWeakSelf.frame.size.height;
                     break;
                 case BottomToTop:
-                    containerFrame.origin.y = -MyWeakSelf.frame.size.height;
+                    containerFrame.origin.y = -2 * MyWeakSelf.frame.size.height;
                     break;
             }
             MyWeakSelf.containerView.frame = containerFrame;
@@ -156,10 +156,10 @@
             containerFrame.origin.x = - self.frame.size.width;
             break;
         case TopToBottom:
-            containerFrame.origin.y = - self.frame.size.height;
+            containerFrame.origin.y = - 2 * self.frame.size.height;
             break;
         case BottomToTop:
-            containerFrame.origin.y = - 2 * self.frame.size.height;
+            containerFrame.origin.y = - self.frame.size.height;
             break;
     }
     self.containerView.frame = containerFrame;
@@ -191,6 +191,11 @@
     [self.containerView addSubview:_firstView];
     [self.containerView addSubview:_secondView];
     [self.containerView addSubview:_thirdView];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(setItemViewStyle:)]){
+        [self.delegate setItemViewStyle:_firstView];
+        [self.delegate setItemViewStyle:_secondView];
+        [self.delegate setItemViewStyle:_thirdView];
+    }
 }
 
 -(void)layoutSubviews{
