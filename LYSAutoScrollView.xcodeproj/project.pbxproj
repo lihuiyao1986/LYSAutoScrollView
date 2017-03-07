@@ -15,6 +15,7 @@
 		481721FC1E6D4D5000184149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481721FB1E6D4D5000184149 /* Assets.xcassets */; };
 		481721FF1E6D4D5000184149 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481721FD1E6D4D5000184149 /* LaunchScreen.storyboard */; };
 		481722091E6D4D7B00184149 /* LYSAutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 481722081E6D4D7B00184149 /* LYSAutoScrollView.m */; };
+		4817220C1E6E43D700184149 /* LYSNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4817220B1E6E43D700184149 /* LYSNoticeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		481722001E6D4D5000184149 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		481722071E6D4D7B00184149 /* LYSAutoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSAutoScrollView.h; sourceTree = "<group>"; };
 		481722081E6D4D7B00184149 /* LYSAutoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSAutoScrollView.m; sourceTree = "<group>"; };
+		4817220A1E6E43D700184149 /* LYSNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSNoticeView.h; sourceTree = "<group>"; };
+		4817220B1E6E43D700184149 /* LYSNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSNoticeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 			children = (
 				481722071E6D4D7B00184149 /* LYSAutoScrollView.h */,
 				481722081E6D4D7B00184149 /* LYSAutoScrollView.m */,
+				4817220A1E6E43D700184149 /* LYSNoticeView.h */,
+				4817220B1E6E43D700184149 /* LYSNoticeView.m */,
 			);
 			path = LYSAutoScrollView;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				481721F11E6D4D5000184149 /* AppDelegate.m in Sources */,
+				4817220C1E6E43D700184149 /* LYSNoticeView.m in Sources */,
 				481721F41E6D4D5000184149 /* MasterViewController.m in Sources */,
 				481721EE1E6D4D5000184149 /* main.m in Sources */,
 				481721F71E6D4D5000184149 /* DetailViewController.m in Sources */,
